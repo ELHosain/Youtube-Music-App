@@ -2,21 +2,21 @@ import {React, useState} from "react";
 import { motion } from "framer-motion";
 import VisibilitySensor from "react-visibility-sensor";
 
-function Feature({ icon, title }) {
+function Feature({icon, title, content}) {
   const variant = {
     true: {
       transform: "scale(1)",
-    },
+    },///
     false: {
       transform: "scale(0.5)",
     },
   };
-  const [elementIsVisible, setElementIsVisible] = useState(false);
 
+  const [elementIsVisible, setElementIsVisible] = useState(false);
   return (
     <VisibilitySensor
       onChange={(isVisible) => setElementIsVisible(isVisible)}
-      // minTopValue={100}
+      minTopValue={100}
     >
       <div className="feature flex items-center justify-center flex-col relative text-center mx-12">
         {/* icon */}
@@ -32,19 +32,14 @@ function Feature({ icon, title }) {
           <img
             src={require(`../img/${icon}.png`)}
             alt=""
-            className="w-[3rem]"
+            className="w-[7rem]"
           />
         </motion.div>
 
         <span className="mt-5">{title}</span>
 
-        <span className="text-[#707070] mt-4">
-          Nunc elementum, dolor vitae lacinia pulvinar, augue felis scelerisque
-          libero, sit amet laoreet lorem.
-        </span>
-
-        <span className="text-[#E600FF] underline mt-[3rem] hover:cursor-pointer">
-          Learn more
+        <span className="text-[#707070] mt-3 w-[55%]">
+          {content}
         </span>
       </div>
     </VisibilitySensor>

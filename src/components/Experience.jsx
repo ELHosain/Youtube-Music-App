@@ -8,16 +8,16 @@ function Experience() {
       <img src={require("../img/Path 318.png")} alt="" className="w-[5rem]" />
       {/* heading */}
       <div className="headline mt-7 flex flex-col items-center text-[2rem]">
-        <span>An Amazing App Can Change Your Daily Life</span>
+        <span>An Incredible Online Education Website That Can Transform</span>
         <span>
-          <b>Music Experience</b>
+          <b>Your Learning Experience</b>
         </span>
       </div>
       {/* features  */}
-      <div className="feature flex items-center justify-around mt-[6rem] w-[100%]">
-        <Feature icon="Group 2" title="For Live Music" />
-        <Feature icon="music icon" title="For Daily Music" />
-        <Feature icon="Group 4" title="For Artists" />
+      <div className="feature flex items-center justify-around mt-[5rem] w-[100%]">
+        <Feature icon="Addpost1" title="For Add New Post" content = ' Allows users to create and publish new content on the website'/>
+        <Feature icon="Groupchat1" title="For Group Chat" content ="Allows multiple users to communicate with each other in a single chat window"/>
+        <Feature icon="Interaction" title="For Interaction" content =" interaction features is to create a more engaging and interactive experience for users"/>
       </div>
     </div>
   );
